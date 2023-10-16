@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('stands', \App\Http\Controllers\StandController::class)->names('stands');
+Route::apiResource('stands', \App\Http\Controllers\StandController::class)->names('stands');
+Route::apiResource('stands/{stand}/products', \App\Http\Controllers\ProductController::class)->names('products');

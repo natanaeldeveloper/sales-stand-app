@@ -34,7 +34,7 @@ class StandController extends Controller
             'status'    => 'success',
             'message'   => __('messages.POST.success'),
             'data'      => new StandResource($stand),
-        ], 202);
+        ], 201);
     }
 
     /**

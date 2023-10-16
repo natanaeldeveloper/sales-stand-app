@@ -60,8 +60,8 @@ class Handler extends ExceptionHandler
             }
 
             if (env('APP_DEBUG') === true) {
-                $response['trace']      = $e->getTrace();
                 $response['message']    = $e->getMessage();
+                // $response['trace']      = $e->getTrace();
             }
 
             return response()->json($response, $errorCode);
